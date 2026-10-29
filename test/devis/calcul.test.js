@@ -171,7 +171,8 @@ describe('§ 7. Devis vide', () => {
   const { calculerDevis } = require('../../src/devis/calcul'); // la fonction testée
   test('piège 1 : 100 vis à 10 € pour un client ordinaire', () => {
     const vis = { reference: 'VIS', prix_ht: 10 }; // un produit à 10 € HT
-    const devis = calculerDevis({ grand_compte: 0 }, [{ produit: vis, quantite: 100 }]); //devis de 100 vis
+    const devis = calculerDevis({ grand_compte: 0 }, [{ produit: vis, quantite: 100 }]); //
+devis de 100 vis
     assert.equal(devis.totalHT, 881); // faux exprès : le bon total est 880
   });
 }
